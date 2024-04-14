@@ -1,0 +1,32 @@
+<p>modificar plato</p>
+<form class="form-group columna">
+    <fieldset>
+        <legend>Añadir plato</legend> 
+        <div class="form-group columna-md-3">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control"
+                [(ngModel)]="cuadroNombreComida">
+        </div>
+
+        <div class="form-group columna-md-3">
+            <label for="ingrediente">ingrediente</label>
+            <input type="email" name="ingrediente" id="ingrediente" placeholder="ingrediente"
+                class="form-control" [(ngModel)]="cuadroIngrediente">
+        </div>
+
+        <br><br>
+
+        <div class="col">
+            <button type="submit" class="button button-primary" (click)="actualizarPlato()" style="margin-right: 50px;">Guardar</button>
+            <!-- 
+                <button type="submit" class="button button-primary" (click)="eliminarPlato()">Eliminar</button>
+            -->
+        </div>
+
+        <br><br>
+        
+    </fieldset>
+</form>
+<div style="text-align: center;">
+    <button class="btn btn-primary" (click)="volverHome()">Inicio</button>
+</div>

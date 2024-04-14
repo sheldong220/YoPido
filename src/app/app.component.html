@@ -1,0 +1,28 @@
+
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm bg-light">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <div class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" href="">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ajustes">Ajustes</a>
+      </li>
+
+      <li class="nav-item" style="margin-left: 660%;" *ngIf="!estaLogueado()">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item" style="margin-left: 620%;" *ngIf="estaLogueado()">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li>
+
+    </div>
+  </ul>
+
+</nav>
+
+<router-outlet></router-outlet> <!--router-outlet: etiqueta especial en Angular que sirve para mostrar los componentes hijos de un componente-->
